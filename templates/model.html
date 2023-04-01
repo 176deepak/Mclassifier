@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mushrrom Classifier</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <div class="text">
+        <h2>
+            Enter details
+        </h2>
+    </div>
+    <div class="form">
+    <form method="post">
+            <select id="cap-shape" name="cap-shape">
+                <option class="placeholder" selected disabled value="">--select cap-shape--</option>
+                <option value="0">bell</option>
+                <option value="1">conical</option>
+                <option value="2">flat</option>
+                <option value="3">knobbed</option>
+                <option value="4">sunken</option>
+                <option value="5">convex</option>
+            </select>
+        <select id="cap-surface" name="cap-surface">
+            <option class="placeholder" selected disabled value="">--select cap-surface--</option>
+            <option value="0">fibrous</option>
+            <option value="1">grooves</option>
+            <option value="2">smooth</option>
+            <option value="3">scaly</option>
+        </select>
+        <br/>
+        <select id="cap-color" name="cap-color">
+            <option class="placeholder" selected disabled value="">--select cap-color--</option>
+            <option value="0">buff</option>
+            <option value="1">cinnamon</option>
+            <option value="2">red</option>
+            <option value="3">gray</option>
+            <option value="4">brown</option>
+            <option value="5">pink</option>
+            <option value="6">green</option>
+            <option value="7">purple</option>
+            <option value="8">white</option>
+            <option value="9">yellow</option>
+        </select>
+        <select id="bruises" name="bruises">
+            <option class="placeholder" selected disabled value="">--select bruises--</option>
+            <option value="0">no</option>
+            <option value="1">yes</option>
+        </select>
+        <br>
+        <select id="odor" name="odor">
+            <option class="placeholder" selected disabled value="">--select odor--</option>
+            <option value="0">almond</option>
+            <option value="1">creosote</option>
+            <option value="2">foul</option>
+            <option value="3">anise</option>
+            <option value="4">musty</option>
+            <option value="5">none</option>
+            <option value="6">pungent</option>
+            <option value="7">spicy</option>
+            <option value="8">fishy</option>
+        </select>
+        <select id="gill-attachment" name="gill-attachment">
+            <option class="placeholder" selected disabled value="">--select gill-attachment--</option>
+            <option value="0">attached</option>
+            <option value="1">free</option>
+        </select>
+        <br>
+        <select id="gill-spacing" name="gill-spacing">
+            <option class="placeholder" selected disabled value="">--select gill-spacing--</option>
+            <option value="0">close</option>
+            <option value="1">crowded</option>
+        </select>
+        <select id="gill-size" name="gill-size">
+            <option class="placeholder" selected disabled value="">--select gill-size--</option>
+            <option value="0">broad</option>
+            <option value="1">narrow</option>
+        </select>
+        <br>
+        <select id="gill-color" name="gill-color">
+            <option class="placeholder" selected disabled value="">--select gill-color--</option>
+            <option value="0">buff</option>
+            <option value="1">red</option>
+            <option value="2">gray</option>
+            <option value="3">chocolate</option>
+            <option value="4">black</option>
+            <option value="5">brown</option>
+            <option value="6">orange</option>
+            <option value="7">pink</option>
+            <option value="8">green</option>
+            <option value="9">purple</option>
+            <option value="10">white</option>
+            <option value="11">yellow</option>
+        </select>
+        <select id="stalk-shape" name="stalk-shape">
+            <option class="placeholder" selected disabled value="">--select stalk-shape--</option>
+            <option value="0">enlarging</option>
+            <option value="1">tapering</option>
+        </select>
+        <br>
+        <select id="stalk-root" name="stalk-root">
+            <option class="placeholder" selected disabled value="">--select stalk-root--</option>
+            <option value="0">bulbous</option>
+            <option value="1">club</option>
+            <option value="2">equal</option>
+            <option value="3">rooted</option>
+        </select>
+        <select id="stalk-surface-above-ring" name="stalk-surface-above-ring">
+            <option class="placeholder" selected disabled value="">--select stalk-above-ring--</option>
+            <option value="0">fibrous</option>
+            <option value="1">silky</option>
+            <option value="2">smooth</option>
+            <option value="3">scaly</option>
+        </select>
+        <br>
+        <select id="stalk-surface-below-ring" name="stalk-surface-below-ring">
+            <option class="placeholder" selected disabled value="">--select stalk-below-ring--</option>
+            <option value="0">fibrous</option>
+            <option value="1">silky</option>
+            <option value="2">smooth</option>
+            <option value="3">scaly</option>
+        </select>
+        <select id="stalk-color-above-ring" name="stalk-color-above-ring">
+            <option class="placeholder" selected disabled value="">--select stalk-color-above-ring--</option>
+            <option value="0">buff</option>
+            <option value="1">cinnamon</option>
+            <option value="2">red</option>
+            <option value="3">gray</option>
+            <option value="4">brown</option>
+            <option value="5">orange</option>
+            <option value="6">pink</option>
+            <option value="7">white</option>
+            <option value="8">yellow</option>
+        </select>
+        <br>
+        <select id="stalk-color-below-ring" name="stalk-color-below-ring">
+            <option class="placeholder" selected disabled value="">--select stalk-color-below-ring--</option>
+            <option value="0">buff</option>
+            <option value="1">cinnamon</option>
+            <option value="2">red</option>
+            <option value="3">gray</option>
+            <option value="4">brown</option>
+            <option value="5">orange</option>
+            <option value="6">pink</option>
+            <option value="7">white</option>
+            <option value="8">yellow</option>        
+        </select>
+        <select id="veil-type" name="veil-type">
+            <option class="placeholder" selected disabled value="">--select veil-type--</option>
+            <option value="0">partial</option>
+            <option value="1">universal</option>
+        </select>
+        <br>
+        <select id="veil-color" name="veil-color">
+            <option class="placeholder" selected disabled value="">--select veil-color--</option>
+            <option value="0">brown</option>
+            <option value="1">orange</option>
+            <option value="2">white</option>
+            <option value="3">yellow</option>
+        </select>
+        <select id="ring-number" name="ring-number">
+            <option class="placeholder" selected disabled value="">--select ring-number--</option>
+            <option value="0">none</option>
+            <option value="1">one</option>
+            <option value="2">two</option>
+        </select>
+        <br>
+        <select id="ring-type" name="ring-type">
+            <option class="placeholder" selected disabled value="">--select ring-type--</option>
+            <option value="0">evanescent</option>
+            <option value="1">flaring</option>
+            <option value="2">large</option>
+            <option value="3">none</option>
+            <option value="4">pendant</option>
+        </select>
+        <select id="spore-print-color" name="spore-print-color">
+            <option class="placeholder" selected disabled value="">--select spore-print-color--</option>
+            <option value="0">buff</option>
+            <option value="1">chocolate</option>
+            <option value="2">black</option>
+            <option value="3">brown</option>
+            <option value="4">orange</option>
+            <option value="5">green</option>
+            <option value="6">purple</option>
+            <option value="7">white</option>
+            <option value="8">yellow</option>
+        </select>
+        <br>
+        <select id="population" name="population">
+            <option class="placeholder" selected disabled value="">--select population--</option>
+            <option value="0">abundant</option>
+            <option value="1">clustered</option>
+            <option value="2">numerous</option>
+            <option value="3">scattered</option>
+            <option value="4">several</option>
+            <option value="5">solitary</option>
+        </select>
+        <select id="habitat" name="habitat">
+            <option class="placeholder" selected disabled value="">--select habitat--</option>
+            <option value="0">woods</option>
+            <option value="1">grasses</option>
+            <option value="2">leaves</option>
+            <option value="3">meadows</option>
+            <option value="4">paths</option>
+            <option value="5">urban</option>
+            <option value="6">waste</option>
+        </select>
+        <br>
+        <input class="submit" placeholder="Predict" type="submit">
+    </form>
+    </div>
+</body>
+</html>

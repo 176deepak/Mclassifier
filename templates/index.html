@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>Home page</title>
+</head>
+<body>
+    <div class="home-page">
+        <h1>
+            Welcome 
+        </h1>
+        <h2>
+            Want to classify mushroom &#127812;
+        </h2>
+        <button>
+            <a href="{{url_for('model')}}">
+                Click me
+            </a>
+        </button>
+        <div class="footer">
+            <p style="color:aliceblue; font-size: small;">Made with <span style="color:#ff1a1a">&#x2764;</span> & &#9749;</p>
+        </div>
+    </div>
+
+</body>
+</html>

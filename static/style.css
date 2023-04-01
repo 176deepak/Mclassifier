@@ -1,0 +1,73 @@
+body{
+    background-color: #000000;
+    overflow: hidden;
+}
+
+.home-page{
+    text-align: center; 
+    margin-top: 20vh;
+    color: aliceblue;
+    font-size: 2vw;
+}
+
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+button{
+    color:  aliceblue;
+    background-color: #A020F0;
+    font-weight:normal;
+    cursor: pointer;
+    width: 80px;
+    padding: 3px 0 3px 0;
+    border-radius: 12px;
+}
+
+.footer{
+    margin-top: 20%;
+}
+
+.text{
+    text-align: center;
+    color: aliceblue;
+    margin-top: 50px;
+}
+
+form{
+    text-align: center;
+    border-color: #A020F0;
+    border-width: 2px;
+}
+
+input{
+    padding: 5px 5px 5px 5px;
+    margin-top: 5px;
+}
+
+.submit{
+    margin-top: 2em;
+    color:  aliceblue;
+    background-color: #A020F0;
+    font-weight:normal;
+    cursor: pointer;
+    width: 80px;
+    padding: 3px 0 3px 0;
+    border-radius: 12px;
+}
+
+h3{
+    color: #A020F0;
+    font-family: cursive;
+    text-align: center;
+    font-size: 2em;
+    margin-top: 50px;
+}
+
+select{
+    width: 15%;
+    margin-top: 0.5%;
+    margin-left: 10px;
+    padding: 5px 0 5px 0;
+    border-radius: 8px;
+}
