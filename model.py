@@ -25,7 +25,8 @@ KNN_model = KNeighborsClassifier()
 
 file_name = "models/model.joblib"
 # fitting dataset into model and dumping it into KNN_model
-joblib.dump(KNN_model.fit(X_train, y_train), filename=file_name)
+
+#joblib.dump(KNN_model.fit(X_train, y_train), filename=file_name)
 saved_model = KNN_model.fit(X_train, y_train)
 
 #accuracy score of model
